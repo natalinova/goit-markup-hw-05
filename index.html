@@ -21,9 +21,11 @@
     <nav class="head-navigation">     
             <a class="logo" href=""><span class="logo-first">Web</span>Studio</a>
         <ul class="head">
-            <li class="nav-link-item"><a class="nav-link" href="./index.html">Студия</a></li>
-            <li class="nav-link-item"><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
-            <li class="nav-link-item"><a class="nav-link" href="">Контакты</a></li>
+            <li class="nav-link-item">
+                <a class="nav-link nav-line" href="./index.html">Студия</a>
+            </li>
+            <li class="nav-link-item "><a class="nav-link nav-line" href="./portfolio.html">Портфолио</a></li>
+            <li class="nav-link-item "><a class="nav-link nav-line" href="">Контакты</a></li>
         </ul>
         
     </nav>
@@ -47,10 +49,10 @@
     <section class="hero-all overlay">
         <div class="container">
         <h1 class="hero-head" > Эффективные решения для вашего бизнеса</h1>
-        <button class="hero-button" type="button">Заказать услугу</button>
+        <button  class="hero-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
     </section>
-    
+
     <!--Блок 2 - "Наші переваги"-->
     <section class="section" >
         <h2 class="visually-hidden">Наши преимущества</h2>
@@ -84,9 +86,9 @@
         <div class="container">
         <h2 class="whatwedo-head">Чем мы занимаемся</h2>
         <ul class="whatwedo-img">
-            <li class="whatwedo-item"><img src="./images/imgcomp.jpg" alt="Разработка для ноутбуков" width="370" height="294"></li>
-            <li class="whatwedo-item"><img src="./images/imgtel.jpg" alt="Pазработка для телефонов" width="370" height="294"></li>
-            <li class="whatwedo-item"><img src="./images/imgplansh.jpg" alt="Разработка для планшетов" width="370" height="294"></li>
+            <li class="whatwedo-item"><img src="./images/imgcomp.jpg" alt="Разработка для ноутбуков" width="370" height="294"><p class="whatwedo-text">десктопные приложения</p></li>
+            <li class="whatwedo-item"><img src="./images/imgtel.jpg" alt="Pазработка для телефонов" width="370" height="294"><p class="whatwedo-text">мобильные приложения</p></li>
+            <li class="whatwedo-item"><img src="./images/imgplansh.jpg" alt="Разработка для планшетов" width="370" height="294"><p class="whatwedo-text">дизайнерские решения</p></li>
         </ul>
         </div>
     </section>
@@ -190,5 +192,13 @@
         </div>
     </div>
 </footer>
+<!--Модальне вікно--->
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="modal-close" type="button" data-modal-close> <img src="./images/close.svg" alt="X"></button>
+    </div>
+</div>
+
+<script src="./js/modal.js"></script>
 </body>
 </html>

@@ -89,10 +89,48 @@ ul {
 .nav-link-item {
   margin-right: 50px;
 }
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  line-height: 1.14;
+  text-align: right;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
 .nav-link:focus,
 .nav-link:hover {
   color: var(--brand-color);
 }
+
+.nav-link:hover.nav-line::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  display: block;
+  background-color: var(--brand-color);
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  bottom: -30px;
+  color: var(--brand-color);
+}
+.nav-link:focus.nav-line::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  display: block;
+  background-color: var(--brand-color);
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  bottom: -30px;
+  color: var(--brand-color);
+}
+.nav-block {
+  position: absolute;
+}
+
 .nav.envelope {
   display: block;
   width: 16px;
@@ -115,14 +153,7 @@ ul {
 .logo-first {
   color: var(--brand-color);
 }
-.nav-link {
-  display: inline-block;
-  color: inherit;
-  line-height: 1.14;
-  text-align: right;
-  letter-spacing: 0.02em;
-  font-weight: 500;
-}
+
 .nav-link-adress {
   display: inline-flex;
   color: var(--grey-text);
@@ -236,6 +267,30 @@ ul {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
 }
+/* Стилізація оверлею*/
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.project-thumb-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  background-color: var(--brand-color);
+  color: var(--color-white);
+  transform: translateY(100%);
+  transition: transform 500ms ease-in-out;
+}
+
+.project-link:hover .project-thumb-text {
+  transform: translateY(0);
+}
+
 /* Стилізація сторінки Студіо - Герой */
 .hero-all {
   padding: 200px 0;
@@ -284,6 +339,46 @@ ul {
   letter-spacing: 0.06em;
 
   cursor: pointer;
+}
+/* розмітка модального вікна*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  pointer-events: initial;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(50% 50%);
+  background-color: var(--color-white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.modal-close {
+  top: 8px;
+  right: 8px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.backdrop.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
 }
 /*   Стилізація блоку Наші переваги */
 .section {
@@ -362,10 +457,23 @@ ul {
   padding-left: 0;
 }
 .whatwedo-item {
+  position: relative;
   margin-left: 30px;
 }
 .whatwedo-item:first-child {
   margin-left: 0;
+}
+.whatwedo-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* Стилізація блоку Команда */
 .team {
