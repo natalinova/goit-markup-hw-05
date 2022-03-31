@@ -351,8 +351,7 @@ ul {
 .backdrop {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(50%);
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
@@ -363,24 +362,36 @@ ul {
 }
 .modal {
   position: absolute;
+  padding: 8px;
   width: 528px;
   height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(50% 50%);
+  transform: translate(-50%, -50%);
   background-color: var(--color-white);
   border-radius: 2px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.modal-image.modal {
+  text-align: end;
+}
 .modal-close {
+  display: block;
   top: 8px;
-  right: 8px;
-  width: 11px;
+  left: 8px;
+  max-width: 11px;
   height: 11px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.modal-image {
+  display: block;
+  width: 11px;
+  height: 11px;
+}
+
 .backdrop.is-hidden {
   pointer-events: none;
   visibility: hidden;
