@@ -358,7 +358,7 @@ ul {
   pointer-events: initial;
   opacity: 1;
   visibility: visible;
-  transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+  transition: opacity var(--time), visibility var(--time);
 }
 .modal {
   position: absolute;
@@ -377,7 +377,12 @@ ul {
   text-align: end;
 }
 .modal-close {
-  display: block;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
   top: 8px;
   right: 8px;
   border-radius: 50%;
@@ -385,7 +390,6 @@ ul {
 }
 
 .modal-image {
-  display: block;
   width: 11px;
   height: 11px;
 }
