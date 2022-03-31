@@ -15,6 +15,8 @@
   --footer-color: rgba(255, 255, 255, 0.6);
   /* Основний шрифт */
   --basic-text: 'Roboto';
+  /* Змінна для CSS-переходу */
+  --time: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 *,
 *::before,
@@ -97,6 +99,7 @@ ul {
   text-align: right;
   letter-spacing: 0.02em;
   font-weight: 500;
+  transition: color var(--time);
 }
 .nav-link:focus,
 .nav-link:hover {
@@ -165,6 +168,7 @@ ul {
 .link-phone,
 .link-mail {
   vertical-align: center;
+  transition: fill var(--time);
 }
 .icon-phone {
   width: 10px;
@@ -212,6 +216,7 @@ ul {
   font-weight: 500;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color var(--time), color var(--time), bow-shadow var(--time);
 }
 .portfolio-button-item {
   margin-right: 8px;
@@ -240,6 +245,7 @@ ul {
 }
 .project-link {
   display: block;
+  transition: box-shadow var(--time);
 }
 .project-link:hover,
 .project-link:focus {
@@ -284,7 +290,7 @@ ul {
   background-color: var(--brand-color);
   color: var(--color-white);
   transform: translateY(100%);
-  transition: transform 500ms ease-in-out;
+  transition: transform var(--time);
 }
 
 .project-link:hover .project-thumb-text {
@@ -539,6 +545,7 @@ ul {
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
+  transition: background-color var(--time);
 }
 
 .social-block {
@@ -551,6 +558,7 @@ ul {
   fill: #afb1b8;
   width: 20px;
   height: 20px;
+  transition: fill var(--time);
 }
 .social-item:hover .social-icon {
   fill: var(--color-white);
@@ -586,11 +594,13 @@ ul {
   border-radius: 4px;
 
   fill: #afb1b8;
+  transition: border-color var(--time);
 }
 
 .client-logo {
   width: 106px;
   height: 60px;
+  transition: fill var(--time);
 }
 .clients-link:hover {
   border-color: var(--brand-color);
@@ -625,15 +635,16 @@ ul {
 }
 .footer-adress {
   display: inline-block;
-
   color: var(--color-white);
   line-height: 1.71;
+  transition: color var(--time);
 }
 .footer-contacts {
   display: inline-block;
 
   line-height: 1.71;
   color: var(--footer-color);
+  transition: color var(--time);
 }
 .adress-item {
   margin-top: 9px;
@@ -675,6 +686,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--time), fill var(--time);
 }
 .footer-social-item:hover {
   background-color: var(--brand-color);
