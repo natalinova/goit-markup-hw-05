@@ -379,9 +379,7 @@ ul {
 .modal-close {
   display: block;
   top: 8px;
-  left: 8px;
-  max-width: 11px;
-  height: 11px;
+  right: 8px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
