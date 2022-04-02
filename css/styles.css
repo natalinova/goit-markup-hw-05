@@ -106,30 +106,19 @@ ul {
   color: var(--brand-color);
 }
 
-.nav-link:hover.nav-line::after {
+.current::after {
   position: absolute;
   left: 0;
   content: '';
   display: block;
   background-color: var(--brand-color);
   width: 100%;
-  height: 2px;
-  border-radius: 1px;
+  height: 4px;
+  border-radius: 2px;
   bottom: -30px;
   color: var(--brand-color);
 }
-.nav-link:focus.nav-line::after {
-  position: absolute;
-  left: 0;
-  content: '';
-  display: block;
-  background-color: var(--brand-color);
-  width: 100%;
-  height: 2px;
-  border-radius: 1px;
-  bottom: -30px;
-  color: var(--brand-color);
-}
+
 .nav-block {
   position: absolute;
 }
@@ -164,6 +153,7 @@ ul {
   align-items: center;
   letter-spacing: 0.02em;
   font-weight: 400;
+  transition: color var(--time);
 }
 .link-phone,
 .link-mail {
@@ -175,12 +165,14 @@ ul {
   height: 16px;
   margin-right: 10px;
   fill: var(--grey-text);
+  transition: color var(--time);
 }
 .icon-mail {
   fill: var(--grey-text);
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  transition: fill var(--time);
 }
 
 .nav-link-item:focus .nav-link-adress {
@@ -195,8 +187,11 @@ ul {
 .nav-link-item:hover .icon-mail {
   fill: var(--brand-color);
 }
-.nav-link-item:focus,
 .nav-link-item:hover .icon-phone {
+  fill: var(--brand-color);
+}
+
+.nav-link-item:focus .icon-phone {
   fill: var(--brand-color);
 }
 /* стилі кнопок в Портфоліо*/
@@ -216,7 +211,7 @@ ul {
   font-weight: 500;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color var(--time), color var(--time), bow-shadow var(--time);
+  transition: background-color var(--time), color var(--time), box-shadow var(--time);
 }
 .portfolio-button-item {
   margin-right: 8px;
@@ -296,7 +291,9 @@ ul {
 .project-link:hover .project-thumb-text {
   transform: translateY(0);
 }
-
+.project-link:focus .project-thumb-text {
+  transform: translateY(0);
+}
 /* Стилізація сторінки Студіо - Герой */
 .hero-all {
   padding: 200px 0;
