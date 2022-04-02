@@ -101,6 +101,9 @@ ul {
   font-weight: 500;
   transition: color var(--time);
 }
+.current {
+  color: var(--brand-color);
+}
 .nav-link:focus,
 .nav-link:hover {
   color: var(--brand-color);
@@ -174,14 +177,31 @@ ul {
   margin-right: 10px;
   transition: fill var(--time);
 }
-
+.nav.envelope:hover {
+  fill: var(--brand-color);
+}
+.nav.envelope:focus {
+  fill: var(--brand-color);
+}
 .nav-link-item:focus .nav-link-adress {
   color: var(--brand-color);
 }
 .nav-link-item:hover .nav-link-adress {
   color: var(--brand-color);
 }
+.nav-link-adress:focus {
+  color: var(--brand-color);
+}
+.nav-link-adress:hover {
+  color: var(--brand-color);
+}
 .nav-link-item:focus .icon-mail {
+  fill: var(--brand-color);
+}
+.icon-mail:hover {
+  fill: var(--brand-color);
+}
+.icon-mail:focus {
   fill: var(--brand-color);
 }
 .nav-link-item:hover .icon-mail {
@@ -192,6 +212,12 @@ ul {
 }
 
 .nav-link-item:focus .icon-phone {
+  fill: var(--brand-color);
+}
+.icon-phone:focus {
+  fill: var(--brand-color);
+}
+.icon-phone:hover {
   fill: var(--brand-color);
 }
 /* стилі кнопок в Портфоліо*/
@@ -620,13 +646,18 @@ ul {
 .clients-link:focus {
   border-color: var(--brand-color);
 }
-.clients-item:hover .client-logo {
+.clients-item:hover {
   fill: var(--brand-color);
 }
-.clients-item:focus .client-logo {
+.clients-item:focus {
   fill: var(--brand-color);
 }
-
+.client-logo:hover {
+  fill: var(--brand-color);
+}
+.client-logo:focus {
+  fill: var(--brand-color);
+}
 /* Стилізація футера   */
 .footer-all {
   padding-top: 60px;
