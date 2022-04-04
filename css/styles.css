@@ -122,22 +122,18 @@ ul {
   color: var(--brand-color);
 }
 
-.nav-block {
-  position: absolute;
-}
-
-.nav.envelope {
+/* .nav.envelope {
   display: block;
   width: 16px;
-  height: 12 px;
-}
+  height: 12px;
+} */
 .head .nav-link-item:last-child {
   margin-right: 0;
 }
 .nav-adress .nav-link-item:last-child {
   margin-right: 0;
 }
-/* Стилі хувера  */
+/* Стилі хoвера  */
 .logo {
   font-family: 'Raleway';
   font-size: 26px;
@@ -152,74 +148,35 @@ ul {
 .nav-link-adress {
   display: inline-flex;
   color: var(--grey-text);
+  fill: var(--grey-text);
   line-height: 1.14;
   align-items: center;
   letter-spacing: 0.02em;
   font-weight: 400;
   transition: color var(--time);
 }
-.link-phone,
-.link-mail {
-  vertical-align: center;
-  transition: fill var(--time);
-}
+
 .icon-phone {
+  color: currentColor;
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  fill: var(--grey-text);
   transition: color var(--time);
 }
 .icon-mail {
-  fill: var(--grey-text);
+  color: currentColor;
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  transition: fill var(--time);
+  transition: fill var(--time), color var(--time);
 }
-.nav.envelope:hover {
-  fill: var(--brand-color);
-}
-.nav.envelope:focus {
-  fill: var(--brand-color);
-}
-.nav-link-item:focus .nav-link-adress {
-  color: var(--brand-color);
-}
-.nav-link-item:hover .nav-link-adress {
-  color: var(--brand-color);
-}
-.nav-link-adress:focus {
-  color: var(--brand-color);
-}
+
+.nav-link-adress:focus,
 .nav-link-adress:hover {
   color: var(--brand-color);
-}
-.nav-link-item:focus .icon-mail {
-  fill: var(--brand-color);
-}
-.icon-mail:hover {
-  fill: var(--brand-color);
-}
-.icon-mail:focus {
-  fill: var(--brand-color);
-}
-.nav-link-item:hover .icon-mail {
-  fill: var(--brand-color);
-}
-.nav-link-item:hover .icon-phone {
   fill: var(--brand-color);
 }
 
-.nav-link-item:focus .icon-phone {
-  fill: var(--brand-color);
-}
-.icon-phone:focus {
-  fill: var(--brand-color);
-}
-.icon-phone:hover {
-  fill: var(--brand-color);
-}
 /* стилі кнопок в Портфоліо*/
 .button-list {
   display: flex;
@@ -512,7 +469,7 @@ ul {
   bottom: 0;
   width: 100%;
   height: 70px;
-  font-weight: 700px
+  font-weight: 700;
   line-height: 1.14;
   color: var(--color-white);
   text-transform: uppercase;
@@ -625,6 +582,7 @@ ul {
   margin-right: 0;
 }
 .clients-link {
+  color: #afb1b8;
   width: 100%;
   height: 100%;
   display: flex;
@@ -632,34 +590,22 @@ ul {
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-
   fill: #afb1b8;
-  transition: border-color var(--time);
+  transition: border-color var(--time), color var(--time);
 }
 
 .client-logo {
+  fill: currentColor;
   width: 106px;
   height: 60px;
   transition: fill var(--time);
 }
-.clients-link:hover {
-  border-color: var(--brand-color);
-}
+.clients-link:hover,
 .clients-link:focus {
+  color: var(--brand-color);
   border-color: var(--brand-color);
 }
-.clients-item:hover {
-  fill: var(--brand-color);
-}
-.clients-item:focus {
-  fill: var(--brand-color);
-}
-.client-logo:hover {
-  fill: var(--brand-color);
-}
-.client-logo:focus {
-  fill: var(--brand-color);
-}
+
 /* Стилізація футера   */
 .footer-all {
   padding-top: 60px;
